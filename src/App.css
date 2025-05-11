@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  height: 100vh;
+}
+
+.ant-layout {
+  min-height: 100%;
+}
