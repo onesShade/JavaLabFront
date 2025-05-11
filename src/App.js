@@ -1,6 +1,6 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter , Routes, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import SimpleHeader from './SimpleHeader';
 import BookList from './pages/BookList';
@@ -23,7 +23,7 @@ function App() {
   return (
     <React.StrictMode>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <BrowserRouter>
+        <HashRouter >
             <SimpleHeader />
             <Content style={{ padding: '24px' }}>
               <Routes>
@@ -33,7 +33,7 @@ function App() {
                 <Route path="/users" element={<UserList/>} />
               </Routes>
             </Content>
-        </BrowserRouter>
+        </HashRouter >
       </ErrorBoundary>
     </React.StrictMode>
   );
